@@ -1,14 +1,42 @@
-sesuai db diagram, terdapat 4 resources dalam sistem kita : user, auth, product dan shop.
+### How to running application file
 
-1. buat rest API crud setiap resource, kecuali auth
-2. di auth api terdapat 3 API : register, login dan checktoken. API checktoken memberikan response api data user pemilik token
-3. ASSOCIATE antar models sesuai database diagram nya
-4. PELAJARI SENDIRI SEEDER di SEQUELIZE, lakukan seeder untuk user ROLE owner sebanyak 5 user
-5. buat middleware baru dengan logic kalian, middleware check apakah user pemilik shop (checkOwnership), kunci nya userId pada Shops table
-6. API untuk : create, update dan delete shop hanya bisa diakses oleh owner
-7. API untuk : update dan delete product hanya bisa dilakukan oleh owner pemilik toko, gunakan middleware checkOwnership
-8. API untuk : create hanya bisa dilakukan oleh user yang mempunyai relasi dengan toko nya, gunakan middleware checkOwnership
-9. setiap API untuk get data INCLUDE models yang mempunyai relasi, berikan di data pada response API nya
-10. buat validasi di setiap API
+# 1. Clone repository from my github
 
+```shel
+$ git clone https://github.com/alipramdhani/CHALLENGE_CH05_FSW-02_BINAR-ACADEMY.git
+```
+
+# 2. Dont forget to Remote Remove Origin
+
+```shel
+$ git remote remove origin
+```
+
+# 3. Instal node_module package
+
+```shel
+$ npm i
+```
+
+# 4. Create dotenv file
+
+1. created name file **.env**
+2. copy from **.env_example**
+3. add secret code to **.env**
+
+# 5. Run Application file
+
+```shel
+$ npm run dev
+```
+
+# 6. Check Open API from Swegger-UI
+
+```shel
+localhost:8000/api-docs/
+```
+
+## Database diagram
+
+database diagram sementara!
 ![My Image](/public/img/db-diagram.png)
